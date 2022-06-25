@@ -1,3 +1,4 @@
+pip install setuptools
 cd engine
 python setup.py install
 cd ..
