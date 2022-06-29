@@ -3,6 +3,7 @@ from keras import Model, Sequential
 from keras.layers import Dense, Activation
 import tensorflow as tf
 import sqlite3
+import bitstring
 from datetime import datetime
 import os, os.path
 
@@ -21,13 +22,14 @@ def pretty_print_bitboard(x):
         if j == 8:
             j = 0
             print("\n--------")
+    print()
     print(len(x))
 
 class ChessEngine:
     def __init__(self):
         self.tensorboard_callback = tf.keras.callbacks.TensorBoard(log_dir="./logs/")
         self.chess_model = Sequential()
-        self.chess_model.add(Dense(808, activation="relu"))
+        self.chess_model.add(Dense(789, activation="relu"))
         self.chess_model.add(Dense(1000, activation="relu"))
         self.chess_model.add(Dense(1000, activation="relu"))
         self.chess_model.add(Dense(1000, activation="relu"))
@@ -46,13 +48,18 @@ class ChessEngine:
         train_x = []
         train_y = []
         for row in r:
-            print(row)
-            x = np.frombuffer(row[2], dtype=np.uint8)
-            x = np.unpackbits(x, axis=0).astype(np.single)
-            # print(row[1])
+            x = row[1]
+            x = np.fromstring(x, 'u1') - ord('0')
             # pretty_print_bitboard(x)
+            if len(str(row[2])) == 0:
+                continue
 
-            y = self.clamp_eval(row[3])
+            if type(row[2]) == str and row[2].startswith('#'):
+                y = row[2].replace('#', '')
+            else:
+                y = row[2]
+            y = float(y)
+            y = self.clamp_eval(y)
             train_x.append(x)
             train_y.append(y)
 
@@ -91,7 +98,7 @@ class ChessEngine:
 
 def main():
     engine = ChessEngine()
-    engine.train(max_rows=5, epochs=1)
+    engine.train(max_rows=10000, epochs=10)
     # engine.save()
     # print("Num GPUs Available: ", len(tf.config.list_physical_devices('GPU')))
 
