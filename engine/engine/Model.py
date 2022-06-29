@@ -50,7 +50,7 @@ class ChessEngine:
         for row in r:
             x = row[1]
             x = np.fromstring(x, 'u1') - ord('0')
-            # pretty_print_bitboard(x)
+            pretty_print_bitboard(x)
             if len(str(row[2])) == 0:
                 continue
 
@@ -98,7 +98,7 @@ class ChessEngine:
 
 def main():
     engine = ChessEngine()
-    engine.train(max_rows=10000, epochs=10)
+    engine.train(max_rows=5, epochs=1)
     # engine.save()
     # print("Num GPUs Available: ", len(tf.config.list_physical_devices('GPU')))
 
