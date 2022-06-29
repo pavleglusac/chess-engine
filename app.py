@@ -17,7 +17,7 @@ app.config['SECRET_KEY'] = 'the quick brown fox jumps over the lazy   dog'
 app.config['CORS_HEADERS'] = 'Content-Type'
 
 
-cors = CORS(app, resources={r"/foo": {"origins": "http://localhost:port"}})
+cors = CORS(app, origins=["http://localhost:8080", "http://matiraj.me"])
 
 chess_engine = ChessEngine()
 if train:
@@ -47,7 +47,7 @@ def train():
 
 
 @app.route("/evaluate", methods=["POST"])
-@cross_origin(origin='localhost', headers=['Content- Type', 'Authorization'])
+@cross_origin(headers=['Content- Type', 'Authorization'])
 def evaluate():
     if request.method == "POST":
         fen = str(request.data)
