@@ -42,7 +42,7 @@ class ChessEngine:
         self.chess_model.add(Dense(1000, activation="relu"))
         self.chess_model.add(Dense(1000, activation="relu"))
         self.chess_model.add(Dense(1))
-        self.chess_model.compile(loss=self.loss_fn, optimizer="adam")
+        #self.chess_model.compile(loss=self.loss_fn, optimizer="adam")
 
     @staticmethod
     def string_to_bits(s):
@@ -85,7 +85,7 @@ class ChessEngine:
     def predict(self, bitboard):
         bitboard = self.string_to_bits(bitboard)
         bb = np.asarray([bitboard])
-        return self.chess_model.predict(bb)
+        return self.chess_model.predict(bb, verbose=0)
 
     def clamp_eval(self, val):
         if val <= -15:

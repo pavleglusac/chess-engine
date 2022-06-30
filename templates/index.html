@@ -165,6 +165,17 @@
                     $evaluation.html(data)
                 }
             });
+            $.ajax({
+                url: "http://localhost:5000/play-move",
+                type: "POST",
+                contentType: "text/plain",
+                data: game.fen(),
+                success: function( data ) {
+                    console.log("-----------------" + data)
+                    game.move(data,{sloppy:true})
+                    board.position(game.fen())
+                }
+            });
 
             updateStatus()
         }

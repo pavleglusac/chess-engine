@@ -1,7 +1,14 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="33ebcea2-f784-437b-a6a6-9f2154b16a94" name="Changes" comment="" />
+    <list default="true" id="33ebcea2-f784-437b-a6a6-9f2154b16a94" name="Changes" comment="">
+      <change beforePath="$PROJECT_DIR$/.idea/chess-engine.iml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/chess-engine.iml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app.py" beforeDir="false" afterPath="$PROJECT_DIR$/app.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/engine/engine/Model.py" beforeDir="false" afterPath="$PROJECT_DIR$/engine/engine/Model.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/templates/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/templates/index.html" afterDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -39,24 +46,45 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent">{
-  &quot;keyToString&quot;: {
-    &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
-    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
-    &quot;WebServerToolWindowFactoryState&quot;: &quot;false&quot;,
-    &quot;last_opened_file_path&quot;: &quot;/home/pavle/Documents/chess-engine/engine/engine&quot;,
-    &quot;settings.editor.selected.configurable&quot;: &quot;preferences.keymap&quot;
-  }
-}</component>
+  <component name="PropertiesComponent">
+    <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
+    <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
+    <property name="WebServerToolWindowFactoryState" value="false" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/engine/engine" />
+    <property name="settings.editor.selected.configurable" value="com.jetbrains.python.configuration.PyActiveSdkModuleConfigurable" />
+  </component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
+      <recent name="C:\Users\Dopudj\Desktop\Faks\3 godina\II\ori\Chess\chess-engine\engine\engine" />
       <recent name="$PROJECT_DIR$/engine/engine" />
     </key>
     <key name="MoveFile.RECENT_KEYS">
       <recent name="$PROJECT_DIR$/engine/engine" />
     </key>
   </component>
-  <component name="RunManager" selected="Python.chess-engine">
+  <component name="RunManager" selected="Python.Minimax">
+    <configuration name="Minimax" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
+      <module name="chess-engine" />
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <envs>
+        <env name="PYTHONUNBUFFERED" value="1" />
+      </envs>
+      <option name="SDK_HOME" value="" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/engine/engine" />
+      <option name="IS_MODULE_SDK" value="true" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <EXTENSION ID="PythonCoverageRunConfigurationExtension" runner="coverage.py" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/engine/engine/Minimax.py" />
+      <option name="PARAMETERS" value="" />
+      <option name="SHOW_COMMAND_LINE" value="false" />
+      <option name="EMULATE_TERMINAL" value="false" />
+      <option name="MODULE_MODE" value="false" />
+      <option name="REDIRECT_INPUT" value="false" />
+      <option name="INPUT_FILE" value="" />
+      <method v="2" />
+    </configuration>
     <configuration name="Model" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
       <module name="chess-engine" />
       <option name="INTERPRETER_OPTIONS" value="" />
@@ -86,7 +114,7 @@
       <envs>
         <env name="PYTHONUNBUFFERED" value="1" />
       </envs>
-      <option name="SDK_HOME" value="" />
+      <option name="SDK_HOME" value="C:\Users\Dopudj\Desktop\Faks\3 godina\II\ori\pgnToFen\pgnToFen-master\venv\Scripts\python.exe" />
       <option name="WORKING_DIRECTORY" value="" />
       <option name="IS_MODULE_SDK" value="false" />
       <option name="ADD_CONTENT_ROOTS" value="true" />
@@ -123,8 +151,15 @@
       <option name="INPUT_FILE" value="" />
       <method v="2" />
     </configuration>
+    <list>
+      <item itemvalue="Python.chess-engine" />
+      <item itemvalue="Python.Model" />
+      <item itemvalue="Python.test" />
+      <item itemvalue="Python.Minimax" />
+    </list>
     <recent_temporary>
       <list>
+        <item itemvalue="Python.Minimax" />
         <item itemvalue="Python.Model" />
         <item itemvalue="Python.test" />
       </list>
@@ -143,6 +178,11 @@
       <workItem from="1656428737696" duration="435000" />
       <workItem from="1656429280151" duration="11544000" />
       <workItem from="1656498138334" duration="876000" />
+      <workItem from="1656531991490" duration="4918000" />
+      <workItem from="1656540434391" duration="1279000" />
+      <workItem from="1656542964760" duration="1364000" />
+      <workItem from="1656544350771" duration="522000" />
+      <workItem from="1656581937449" duration="5905000" />
     </task>
     <servers />
   </component>
@@ -161,16 +201,19 @@
     </option>
   </component>
   <component name="XDebuggerManager">
-    <breakpoint-manager>
-      <breakpoints>
-        <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
-          <url>file://$PROJECT_DIR$/engine/engine/Model.py</url>
-          <option name="timeStamp" value="2" />
-        </line-breakpoint>
-      </breakpoints>
-    </breakpoint-manager>
+    <watches-manager>
+      <configuration name="PythonConfigurationType">
+        <watch expression="board.legal_moves" language="Python" />
+        <watch expression="list(board.legal_moves)" language="Python" />
+        <watch expression="legal_moves" language="Python" />
+        <watch expression="dir(frozen_func(tf.convert_to_tensor(bb))[0][0][0])" language="Python" />
+        <watch expression="frozen_func(tf.convert_to_tensor(bb))[0][0][0].eval" language="Python" />
+      </configuration>
+    </watches-manager>
   </component>
   <component name="com.intellij.coverage.CoverageDataManagerImpl">
+    <SUITE FILE_PATH="coverage/chess_engine$chess_engine.coverage" NAME="chess-engine Coverage Results" MODIFIED="1656534912019" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="" />
+    <SUITE FILE_PATH="coverage/chess_engine$Minimax.coverage" NAME="Minimax Coverage Results" MODIFIED="1656587872720" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/engine/engine" />
     <SUITE FILE_PATH="coverage/chess_engine$test.coverage" NAME="test Coverage Results" MODIFIED="1656434509819" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/engine/engine" />
     <SUITE FILE_PATH="coverage/chess_engine$Model.coverage" NAME="Model Coverage Results" MODIFIED="1656445735577" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/engine/engine" />
   </component>

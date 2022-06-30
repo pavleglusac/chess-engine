@@ -2,6 +2,7 @@ from re import TEMPLATE
 from flask import Flask, render_template, redirect, url_for, request
 from flask_cors import cross_origin, CORS
 from engine.engine.Model import ChessEngine
+from engine.engine.Minimax import playMove
 
 app = Flask(__name__)
 
@@ -16,7 +17,6 @@ train = False
 app.config['SECRET_KEY'] = 'the quick brown fox jumps over the lazy   dog'
 app.config['CORS_HEADERS'] = 'Content-Type'
 
-
 cors = CORS(app, origins=["http://localhost:8080", "http://matiraj.me"])
 
 chess_engine = ChessEngine()
@@ -25,8 +25,6 @@ if train:
     chess_engine.save()
 else:
     chess_engine.load()
-
-
 
 
 @app.route("/")
@@ -44,6 +42,16 @@ def model():
 def train():
     chess_engine.train()
     return render_template('index.html')
+
+
+@app.route("/play-move", methods=["POST"])
+@cross_origin(headers=['Content- Type', 'Authorization'])
+def play():
+    if request.method == "POST":
+        fen = str(request.data)
+        fen = fen[2:len(fen) - 1]
+        result = playMove(fen, 2, chess_engine)
+        return str(result)
 
 
 @app.route("/evaluate", methods=["POST"])
