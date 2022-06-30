@@ -24,7 +24,7 @@ if train:
     chess_engine.train(max_rows=1000000, epochs=20)
     chess_engine.save()
 else:
-    chess_engine.load()
+    chess_engine.load(path="./engine/engine/models/engine_novi.h5")
 
 
 @app.route("/")

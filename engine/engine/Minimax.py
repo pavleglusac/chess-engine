@@ -16,8 +16,8 @@ def getFirstXMoves(legal_moves,board,chess_engine,size):
         board_copy = copy.deepcopy(board)
         board_copy.push_san(str(legal_move))
         dict[legal_move] = chess_engine.evaluate_fen(board_copy.fen())
-    sorted(dict.items(), key=lambda x: x[1], reverse = board.fen().split(' ')[1] != 'w')
-    return list(dict.keys())[0:size]
+    touple_list = sorted(dict.items(), key=lambda x: x[1], reverse = board.fen().split(' ')[1] != 'w')
+    return  [x[0] for x in touple_list][0:size]
 
 
 def playMove(fen, depth, chess_engine):
@@ -29,8 +29,8 @@ def playMove(fen, depth, chess_engine):
     for item in getFirstXMoves(list(board.legal_moves), board, chess_engine, 5):
         print(item)
         dict[item] = minimax(copy.deepcopy(board), item, depth - 1, tree.root, -math.inf, math.inf, chess_engine)
-    sorted(dict.items(), key=lambda x: x[1], reverse = board.fen().split(' ')[1] != 'w')
-    return list(dict.keys())[0]
+    touple_list = sorted(dict.items(), key=lambda x: x[1], reverse = board.fen().split(' ')[1] != 'w')
+    return  [x[0] for x in touple_list][0]
 
 
 def minimax(board, legal_move, depth, parent, alpha, beta, chess_engine):
@@ -63,5 +63,6 @@ if __name__ == "__main__":
     import time
 
     start_time = time.time()
-    print(playMove("rn3rk1/ppp3pp/4pn2/1q6/8/P2P1N2/1PPQBPPP/R4RK1 w - - 0 13", 2))
+    chess_engine = ChessEngine()
+    print(playMove("rn3rk1/ppp3pp/4pn2/1q6/8/P2P1N2/1PPQBPPP/R4RK1 w - - 0 13", 2,chess_engine))
     print("My program took", time.time() - start_time, "to run")

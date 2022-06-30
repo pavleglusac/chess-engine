@@ -2,12 +2,11 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="33ebcea2-f784-437b-a6a6-9f2154b16a94" name="Changes" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/chess-engine.iml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/chess-engine.iml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app.py" beforeDir="false" afterPath="$PROJECT_DIR$/app.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/engine/engine/Minimax.py" beforeDir="false" afterPath="$PROJECT_DIR$/engine/engine/Minimax.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/engine/engine/Model.py" beforeDir="false" afterPath="$PROJECT_DIR$/engine/engine/Model.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/templates/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/templates/index.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/requirements.txt" beforeDir="false" afterPath="$PROJECT_DIR$/requirements.txt" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -50,11 +49,12 @@
     <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
     <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/engine/engine" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/engine/engine/models" />
     <property name="settings.editor.selected.configurable" value="com.jetbrains.python.configuration.PyActiveSdkModuleConfigurable" />
   </component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
+      <recent name="C:\Users\Dopudj\Desktop\Faks\3 godina\II\ori\Chess\chess-engine\engine\engine\models" />
       <recent name="C:\Users\Dopudj\Desktop\Faks\3 godina\II\ori\Chess\chess-engine\engine\engine" />
       <recent name="$PROJECT_DIR$/engine/engine" />
     </key>
@@ -208,12 +208,18 @@
         <watch expression="legal_moves" language="Python" />
         <watch expression="dir(frozen_func(tf.convert_to_tensor(bb))[0][0][0])" language="Python" />
         <watch expression="frozen_func(tf.convert_to_tensor(bb))[0][0][0].eval" language="Python" />
+        <watch expression="dict" language="Python" />
+        <watch expression="sorted(dict.items(), key=lambda x: x[1], reverse = board.fen().split(' ')[1] != 'w')" language="Python" />
+        <watch expression="(sorted(dict.items(), key=lambda x: x[1], reverse = board.fen().split(' ')[1] != 'w')).keys()" language="Python" />
+        <watch expression="sorted(dict.items(), key=lambda x: x[1], reverse = board.fen().split(' ')[1] != 'w')" language="Python" />
+        <watch expression="sorted(dict.items(), key=lambda x: x[1], reverse = board.fen().split(' ')[1] != 'w')[0]" language="Python" />
+        <watch expression="[x[0] for x in touple_list][0:size]" language="Python" />
       </configuration>
     </watches-manager>
   </component>
   <component name="com.intellij.coverage.CoverageDataManagerImpl">
     <SUITE FILE_PATH="coverage/chess_engine$chess_engine.coverage" NAME="chess-engine Coverage Results" MODIFIED="1656534912019" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="" />
-    <SUITE FILE_PATH="coverage/chess_engine$Minimax.coverage" NAME="Minimax Coverage Results" MODIFIED="1656587872720" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/engine/engine" />
+    <SUITE FILE_PATH="coverage/chess_engine$Minimax.coverage" NAME="Minimax Coverage Results" MODIFIED="1656609293816" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/engine/engine" />
     <SUITE FILE_PATH="coverage/chess_engine$test.coverage" NAME="test Coverage Results" MODIFIED="1656434509819" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/engine/engine" />
     <SUITE FILE_PATH="coverage/chess_engine$Model.coverage" NAME="Model Coverage Results" MODIFIED="1656445735577" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/engine/engine" />
   </component>
